@@ -10,8 +10,10 @@ body{
 }
 
 .subheader{
+    font-family:Georgia, 'Times New Roman', Times, serif;
     font-size: 17px;
     color: gray;
+    font-style: italic;
 }
 
 .chartContainer {
