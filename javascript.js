@@ -82,9 +82,22 @@ var myChart = new Chart(ctx, {
                     text: 'GDP per capita (USD)'
                 }
             }
+        },
+        plugins: {
+            legend: {
+                position: 'right', 
+                labels: {
+                    boxWidth: 20, 
+                    padding: 15
+                }
+            },
+            title: {
+                display: false
+            }
         }
     }
-});
+    });
+    
 
 var ctx = document.getElementById('radarChart').getContext('2d');
 
@@ -135,11 +148,17 @@ var radarChart = new Chart(ctx, {
       }
     },
     plugins: {
-      legend: { position: 'top' },
-      title: {
-        display: false
-      }
+        legend: {
+            position: 'right', 
+            labels: {
+                boxWidth: 20, 
+                padding: 15
+            }
+        },
+        title: {
+            display: false
+        }
     }
-  }
+}
 });
 
