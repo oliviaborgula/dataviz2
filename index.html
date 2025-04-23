@@ -1,24 +1,42 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Line chart</title>
-    <!--Chart.js JS CDN--> 
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <link rel="stylesheet" href="style.css">
-
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Line chart</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="style.css">
 </head>
-  <body>
+<body>
 
-    <!-- add this container and style to stylesheet to resize the graphic-->
-    <div class="chartContainer">
-      <canvas id="myChart"></canvas>
-      <div class="source">Source: Gapminder</div>
+<div class="heading">
+    <h1 class="header">Life expectancy around the world</h1>
+    <p class="subheader">Compare how different habits and characteristics affect life expectancy among different countries.</p>
+</div>
+
+  <!-- CHART 1: SCATTERPLOT -->
+  <div class="chartContainer">
+    <div class="chartInner">
+        <h2>Japan has the highest life expectancy at about 81 years</h2>
+        <p class="chatter">The U.S. has a higher GDP per capita, but a slightly lower life expectancy than Japan.</p>
     </div>
+    <canvas id="myChart"></canvas>
+    <div class="source">Source: Gapminder</div>
+  </div>
 
-<script src="javascript.js"></script>
+  <!-- CHART 2: RADAR CHART -->
+  <div class="chartContainer">
+    <div class="chartInner">
+        <h2>How China and the U.S. Spend Their Time</h2>
+        <p class="chatter">This chart compares how people in China and the U.S. spend their daily time across various activities, based on average minutes per day.</p>
+    </div>
+    <canvas id="radarChart"></canvas>
+    <div class="chartInner">
+        <div class="source">Source: Time Use Data</div>
+    </div>
+  </div>
 
-  </body>
+  <!-- Only load the JS once, after DOM is loaded -->
+  <script src="javascript.js"></script>
+</body>
 </html>

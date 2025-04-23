@@ -85,3 +85,61 @@ var myChart = new Chart(ctx, {
         }
     }
 });
+
+var ctx = document.getElementById('radarChart').getContext('2d');
+
+var radarChart = new Chart(ctx, {
+  type: 'radar',
+  data: {
+    labels: [
+      "Paid Work", 
+      "Education", 
+      "Housework", 
+      "Eating and drinking", 
+      "Sports", 
+      "Seeing Friends", 
+      "TV and Radio"
+    ],
+    datasets: [
+      {
+        label: "United States",
+        data: [251, 31, 100, 63, 18, 44, 148],
+        backgroundColor: "rgba(255,165,0,0.2)",
+        borderColor: "#ffa500",
+        pointBackgroundColor: "#ffa500"
+      },
+      {
+        label: "China",
+        data: [315, 25, 103, 100, 23, 23, 127],
+        backgroundColor: "rgba(62,149,205,0.2)",
+        borderColor: "#3e95cd",
+        pointBackgroundColor: "#3e95cd"
+      }
+    ]
+  },
+  options: {
+    responsive: true,
+    scales: {
+      r: {
+        angleLines: { display: true },
+        suggestedMin: 0,
+        suggestedMax: 400,
+        ticks: {
+          stepSize: 100
+        },
+        pointLabels: {
+          font: {
+            size: 12
+          }
+        }
+      }
+    },
+    plugins: {
+      legend: { position: 'top' },
+      title: {
+        display: false
+      }
+    }
+  }
+});
+
